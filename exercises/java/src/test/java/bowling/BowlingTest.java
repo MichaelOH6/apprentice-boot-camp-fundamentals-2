@@ -46,10 +46,9 @@ public class BowlingTest {
         //act
         int score = zeroGame.getScore();
 
-
-
         assertThat(score).isEqualTo(11);
 
     }
+
 
 }
