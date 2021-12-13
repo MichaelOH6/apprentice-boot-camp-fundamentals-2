@@ -61,5 +61,28 @@ public class BowlingTest {
         assertThat(score).isEqualTo(14);
 
     }
+    @Test
+
+    public void spareLastFrame(){
+        BowlingGame zeroGame = new BowlingGame(new int[] {5,5 ,5,5, 5,5, 5,5, 5,5,
+                5,5, 5,5, 5,5, 5,5, 5,5, 5});
+
+        //act
+        int score = zeroGame.getScore();
+
+        assertThat(score).isEqualTo(150);
+
+    }
+    @Test
+    public void strikes(){
+        BowlingGame zeroGame = new BowlingGame(new int[] {10, 10, 10, 10, 10,
+                10, 10, 10, 10, 10, 10, 10});
+
+        //act
+        int score = zeroGame.getScore();
+
+        assertThat(score).isEqualTo(300);
+    }
+
 
 }
