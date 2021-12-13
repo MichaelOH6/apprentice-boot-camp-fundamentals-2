@@ -6,17 +6,22 @@ public class BowlingGame {
 
     int score = 0;
     public BowlingGame(int[] rolls) {
+            boolean strike = false;
 
-
-
+        int firstRollIndex = 0;
         for (int frameIndex=0; frameIndex<10; frameIndex++) {
-            int firstRollIndex = frameIndex*2;
-            int secondRollIndex = frameIndex*2 + 1;
 
-            if (rolls[firstRollIndex] + rolls[secondRollIndex] == 10) {
-                score += rolls[firstRollIndex] + rolls[secondRollIndex] + rolls[secondRollIndex + 1];
-            } else {
+            int firstRoll = rolls[firstRollIndex];
+            if(firstRoll == 10){
+                score += firstRoll += rolls[firstRollIndex+1] + rolls[firstRollIndex+2];
+                firstRollIndex ++;
+            }else {
+                int secondRollIndex =  firstRollIndex + 1;
                 score += rolls[firstRollIndex] + rolls[secondRollIndex];
+                if (rolls[firstRollIndex] + rolls[secondRollIndex] == 10) {
+                    score += rolls[secondRollIndex + 1];
+                }
+                firstRollIndex += 2;
             }
         }
     }

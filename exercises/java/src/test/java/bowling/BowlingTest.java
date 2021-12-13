@@ -49,6 +49,17 @@ public class BowlingTest {
         assertThat(score).isEqualTo(11);
 
     }
+    @Test
 
+    public void strike(){
+        BowlingGame zeroGame = new BowlingGame(new int[] {10, 1,1, 0,0, 0,0, 0,0,
+                0,0, 0,0, 0,0, 0,0, 0,0});
+
+        //act
+        int score = zeroGame.getScore();
+
+        assertThat(score).isEqualTo(14);
+
+    }
 
 }
