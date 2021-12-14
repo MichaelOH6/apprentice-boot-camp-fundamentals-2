@@ -83,6 +83,17 @@ public class BowlingTest {
 
         assertThat(score).isEqualTo(300);
     }
+    @Test
+    public void nineZero(){
+        BowlingGame zeroGame = new BowlingGame(new int[] {9,0, 9,0, 9,0, 9,0, 9,0,
+                9,0, 9,0, 9,0, 9,0, 9,0, 9,0, 9,0});
+
+        //act
+        int score = zeroGame.getScore();
+
+        assertThat(score).isEqualTo(90);
+
+    }
 
 
 }
