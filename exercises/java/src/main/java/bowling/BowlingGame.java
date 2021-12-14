@@ -1,6 +1,5 @@
 package bowling;
 
-import java.util.ArrayList;
 
 public class BowlingGame {
 
